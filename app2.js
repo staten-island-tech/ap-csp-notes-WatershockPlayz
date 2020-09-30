@@ -1,37 +1,23 @@
-//Function defintion
-function calculateBill(bill = 100, taxRate = 0.13, tipRate = 0.15) { //Use local vars (Parameters) not global in a function
-  //This is the function body
-  console.log("Running Calculate Bill!!")
-  const total = bill + bill * (taxRate + tipRate); //Remember PEMDAS
-  return total;
+const user = { //Called like a variable, but everything in the brackets is a property of an OBJECT
+    name: 'Edwin', //string
+    age: 24, //Integer/Float (Number)
+    married: false, //Boolean
+    purchases: ["phone", "car", "laptop"],//array
+
+sayName: function() { //can also call a function in OBJECT
+    console.log(this.name); //refers to THIS object and the variable NAME
 }
 
-const wesTotal = 500;
-const wesTaxRate = 0.3;
+};
 
-const myTotal = calculateBill(wesTotal, wesTaxRate); //Arguments in functions
+console.log(user.purchases); //OBJECT.
 
-console.log(myTotal);
-
-//Function definition
-function sayHiTo(firstName) {
-    return `Hello ${firstName}`;
+function apples() { //functions are saved under a massive WINDOW opbject
+    console.log('Apple');
 }
 
-//const greeting = sayHiTo('Wes');
-//console.log(greeting);
+//THIS
 
-//const myTotal3 = calculateBill(20+20+20+30+20, 0.15);
+window.apples(); //All functions are saved under a windows object
 
-function doctorize(name) {
-    return `Dr. ${name}`;
-}
-
-function yell(name = "Silly Goose") { //It's okay to reuse parameters. Set a default
-    return `HEY ${name.toUpperCase()}`;
-}
-
-//yell(doctorize('melvin'));
-
-const myBill4 = calculateBill(100, 0.13, 0);
-console.log(myBill4);
+user.sayName(); 
