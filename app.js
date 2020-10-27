@@ -1,24 +1,20 @@
-const age = 20;
+console.log('Starting');
+setTimeout(function () {
+    console.log("Running");
+}, 2000);
+console.log("ending");
 
-//if (age = 18) { //ONLY if age exactly
-//if (age == 18) { //ONLY if age exactly equals 18 regardless if either is string or number
-//if (age === 18) { //ONLY if age exactly equals 18 and is a number
-//if (age >= 18) { //Greater or equal than 18
-//if (age <= 18) { //Less or equal than 18 
-
-if (age > 18) { //If you are older than 18 then
-console.log("You are good to go!");
-} else if (age < 15) { //If not 18 and below 1
-    console.log("Wow you are really young.. why are you even here?");
-} else { //If not 18, but older than 15
-    console.log("You are not old enough");
-}
-
-const dice1 = 6;
-const dice2 = 3;
-
-if (dice ===6 && dice2 ===6) { //Both of these clauses need to be correct
-    console.log('You rolled a double');
-} else {
-    console.log("You didn't")
-}
+const go = document.querySelector(".go");
+//Change the text to GO when clicked
+go.addEventListener('click', function (e) {
+    const el = e.currentTarget;
+    console.log(el);
+    setTimeout(function() {
+        el.classList.add('circle');
+    }, 2000);
+})
+//MAke it a circle after 2 seconds
+//make it square after 0.5s
+//make it square after 0.5s
+//make it square after 0.5s
+//make it square after 0.5s

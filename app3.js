@@ -1,41 +1,38 @@
-const color = 'red';
-
-switch(color){ //Different way of doing else if, works better when you have a lot of cases.
-    case 'red':
-        console.log('Color is red');
-        break;
-    case 'blue':
-        console.log('Color is blue');
-        break;
-    default:
-        console.log('Color is not Red or Blue');
-
+function wait(ms = 0) {
+    return new Promise((resolve) => {
+        setTimeout(resolve, ms);
+    })
 }
 
-let day;
-
-switch(new Date().getDay()) {
-    case 0:
-        day = 'Sunday';
-        break;
-    case 1:
-        day = 'Monday';
-         break;
-    case 2:
-        day = 'Tuesday';
-        break;
-    case 3:
-        day = 'Wednesday';
-        break;
-    case 4:
-        day = 'Thursday';
-        break;
-    case 5:
-        day = 'Friday';
-        break;
-    case 6:
-        day = 'Saturday';
-        break;
+async function go() {
+    console.log('Starting');
+    await wait(2000);
+    console.log('Running');
+    await wait(2000);
+    console.log('ending');
 }
+go();
 
-console.log('Today is $(day)')
+//function decleration
+async function fd() {}
+
+//arrow function
+const arrowFn = async () => {}
+
+//call back
+window.addEventListener('click', async function () {
+
+})
+
+//
+const person = {
+    //method
+    sayHi: async function() {
+
+    },
+    //method shorthand
+    async sayHello() {
+
+    },
+    //function property
+}
